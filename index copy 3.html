@@ -10,11 +10,13 @@
 <body>
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
         <!-- Definir un marcador (código QR) -->
+
         <a-marker preset="hiro">
-            <!-- Cambia a tu modelo personalizado -->
-            <a-entity gltf-model="url(tree.gltf)"></a-entity>
+            <!-- Contenido que se mostrará cuando se detecte el marcador -->
+            <a-box position="0 0.5 0" material="color: #FF5733;"></a-box>
             <a-text value="Ejemplo de AR.js" position="0 -1 0" scale="2 2 2" color="white"></a-text>
         </a-marker>
+
         <!-- Agregar iluminación -->
         <a-light type="ambient" position="2 4 -3"></a-light>
         <a-light type="directional" position="1 1 1"></a-light>
