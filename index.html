@@ -12,13 +12,18 @@
         <!-- Definir un marcador (código QR) -->
         <a-marker preset="hiro">
             <!-- Cambia a tu modelo personalizado -->
-            <a-entity gltf-model="laberinto.gltf" position="0 0 0" scale=".01 .01 .01" >
+            <a-entity material='color: red' gltf-model="laberinto.gltf" position="0 0 0" scale=".01 .01 .01" >
                 <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
             </a-entity>
-            <a-text value="www.evoke.games" position="0 0 0" 
-            scale="1 1 1" color="white" rotation="0 0 0"
-            ></a-text>
-            
+            <a-entity rotation="90 0 0">
+
+                <a-text value="www.evoke.games" position="0 0 0" 
+                scale="1 1 1" color="white" rotation="0 0 0">
+                    <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite">
+                    </a-animation>
+                </a-text>
+            </a-entity>
+
 
         </a-marker>
         <a-entity camera></a-entity>
