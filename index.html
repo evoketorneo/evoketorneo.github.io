@@ -9,23 +9,12 @@
 </head>
 <body>
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-        <a-assets>
-            <img id='earth' src='https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg' />
-        </a-assets>
         <!-- Definir un marcador (código QR) -->
         <a-marker preset="hiro">
             <!-- Cambia a tu modelo personalizado -->
-
-            
-                <a-anchor hit-testing-enabled='true'>
-                  <a-entity rotation="90 0 0">
-                    <a-sphere material='src: #earth;' position="0 0.5 0" radius="1" segments-height="53">
-                      <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite">
-                      </a-animation>
-                    </a-sphere>
-                  </a-entity>
-                </a-anchor>
-                <a-camera-static/>
+            <a-entity gltf-model="tree.gltf" position="0 0 0" scale=".1 .1 .1" >
+                <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-entity>
             <a-text value="www.evoke.games" position="0 0 0" 
             scale="1 1 1" color="white" rotation="0 0 0"
             ></a-text>
