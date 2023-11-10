@@ -10,10 +10,7 @@
 <body>
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
         <!-- Definir un marcador (código QR) -->
-        <a-marker id="animated-marker" type='barcode' value='1'  raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        smooth="true">
+        <a-marker preset="hiro">
             <!-- Cambia a tu modelo personalizado -->
             <a-entity 
                 gltf-model="laberinto.gltf" position="0 0 0" scale=".01 .01 .01" 
